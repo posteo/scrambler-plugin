@@ -1,0 +1,24 @@
+
+plugin {
+    mail_filter = mail-filter %u %w
+    mail_filter_out = mail-filter-out %u %w
+}
+
+service mail-filter {
+    executable = script <%= with_base_directory 'script/mail-filter.sh' %>
+    user = <%= current_user %>
+    unix_listener mail-filter {
+        # enough permissions to give imap/pop3/etc processes access to this socket
+        mode = 0600
+        user = <%= current_user %>
+    }
+}
+service mail-filter-out {
+    executable = script <%= with_base_directory 'script/mail-filter-out.sh' %>
+    user = <%= current_user %>
+    unix_listener mail-filter-out {
+        # enough permissions to give imap/pop3/etc processes access to this socket
+        mode = 0600
+        user = <%= current_user %>
+    }
+}
