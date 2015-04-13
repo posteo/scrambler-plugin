@@ -14,10 +14,10 @@ class Database
         [ id, name, password ])
   end
 
-  def insert_key(id, enabled)
+  def insert_key(id, enabled, password = nil)
     @database.execute(
         'INSERT INTO keys (id, enabled, public_key, private_key, private_key_salt, private_key_iterations) VALUES (?, ?, ?, ?, ?, ?)',
-        [ id, (enabled ? 1 : 0), default_public_key, default_private_key, default_private_key_salt, default_private_key_iterations ])
+        [ id, (enabled ? 1 : 0), default_public_key, default_private_key(password), default_private_key_salt, default_private_key_iterations ])
   end
 
   def update_key(id, enabled)
@@ -86,9 +86,9 @@ class Database
     escape_pem default_key_pair.public_key.to_pem
   end
 
-  def default_private_key
+  def default_private_key(password = nil)
     settings = '$2a$%02u$%22s' % [ default_private_key_iterations, default_private_key_salt ]
-    hashed_password = BCrypt::Engine.hash_secret default_private_key_password, settings
+    hashed_password = BCrypt::Engine.hash_secret (password || default_private_key_password), settings
     escape_pem default_key_pair.to_pem(OpenSSL::Cipher.new('aes-256-cbc'), hashed_password)
   end
 

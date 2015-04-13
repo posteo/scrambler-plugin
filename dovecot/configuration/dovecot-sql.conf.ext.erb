@@ -112,7 +112,7 @@ password_query = \
            1000 AS userdb_uid, \
            1000 AS userdb_gid, \
            '<%= with_base_directory 'home' %>/%n' AS userdb_home, \
-           '%w' AS userdb_scrambler_plain_password, \
+           REPLACE('%w', '%%', '%%%%') AS userdb_scrambler_plain_password, \
            keys.enabled AS userdb_scrambler_enabled, \
            keys.public_key AS userdb_scrambler_public_key, \
            keys.private_key AS userdb_scrambler_private_key, \

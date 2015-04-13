@@ -5,15 +5,17 @@ require 'tempfile'
 describe 'Mail encryption enabled' do
 
   before :all do
+    password = 'testPassword'
+
     @database = Database.new
-    @mailer = Mailer.new
+    @mailer = Mailer.new 'test.com', 'sender@test.com', 'test', password
     @storage = Storage.new
     @administrator = Administrator.new 'test'
 
     @database.clear_users
     @database.clear_keys
-    @database.insert_user 1, 'test', 'testPassword'
-    @database.insert_key 1, true
+    @database.insert_user 1, 'test', password
+    @database.insert_key 1, true, password
   end
 
   after :all do
