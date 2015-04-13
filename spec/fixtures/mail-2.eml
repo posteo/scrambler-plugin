@@ -1,0 +1,146 @@
+Return-Path: <moviemento-bounces@listi.jpberlin.de>
+Delivered-To: <test@posteo.de>
+Received: from proxy01.posteo.de ([127.0.0.1])
+	by dovecot01.posteo.de (Dovecot) with LMTP id /gAQLxU0SFSwSQAAcnFQ7Q
+	for <test@posteo.de>; Thu, 23 Oct 2014 01:06:12 +0200
+Received: from proxy01.posteo.de ([127.0.0.1])
+	by proxy01.posteo.de (Dovecot) with LMTP id AQSeONg2SFRnswMAKZGY6Q
+	; Thu, 23 Oct 2014 01:06:14 +0200
+Received: from mx02.posteo.de (unknown [10.125.125.165])
+	by proxy01.posteo.de (Postfix) with ESMTPS id 3jNS4Q1D0kz2y9j
+	for <test@posteo.de>; Thu, 23 Oct 2014 01:06:14 +0200 (CEST)
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by mx02.posteo.de (Postfix) with ESMTP id 00F5925B17CB
+	for <test@posteo.de>; Thu, 23 Oct 2014 01:06:12 +0200 (CEST)
+X-Virus-Scanned: amavisd-new at posteo.de
+X-Spam-Flag: NO
+X-Spam-Score: -1.12
+X-Spam-Level:
+X-Spam-Status: No, score=-1.12 required=6.01 tests=[BAYES_00=-1.9,
+	RCVD_IN_DNSWL_NONE=-0.0001, SPF_NEUTRAL=0.779, URIBL_BLOCKED=0.001]
+	autolearn=no
+Received: from mx02.posteo.de ([127.0.0.1])
+	by localhost (amavis1.posteo.de [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id e0Oq1g_4DiqX for <test@posteo.de>;
+	Thu, 23 Oct 2014 01:06:10 +0200 (CEST)
+Received: from apofis.udag.de (apofis.udag.de [62.146.106.22])
+	by mx02.posteo.de (Postfix) with ESMTPS
+	for <test@posteo.de>; Thu, 23 Oct 2014 01:06:09 +0200 (CEST)
+Received: from mailman.heinlein-hosting.de (localhost [127.0.0.1])
+	by ilpostino.jpberlin.de (Postfix) with ESMTP id 73EAE61E4C;
+	Thu, 23 Oct 2014 01:04:35 +0200 (CEST)
+X-Original-To: moviemento@listi.jpberlin.de
+Delivered-To: moviemento@listi.jpberlin.de
+Received: from plasma3.jpberlin.de (plasma3.jpberlin.de [80.241.56.68])
+ by ilpostino.jpberlin.de (Postfix) with ESMTPS id A33F060EE7
+ for <moviemento@listi.jpberlin.de>; Thu, 23 Oct 2014 01:03:14 +0200 (CEST)
+Received: from gerste.heinlein-support.de (gerste.heinlein-support.de
+ [91.198.250.173])
+ (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+ (Client did not present a certificate)
+ by plasma.jpberlin.de (Postfix) with ESMTPS id 8F9CFAA5DF
+ for <moviemento@listi.jpberlin.de>; Thu, 23 Oct 2014 01:03:14 +0200 (CEST)
+X-Virus-Scanned: amavisd-new at heinlein-support.de
+Received: from plasma.jpberlin.de ([91.198.250.140]) (using TLS with cipher
+ AES256-SHA)
+ by gerste.heinlein-support.de (gerste.heinlein-support.de [91.198.250.173])
+ (amavisd-new, port 10030)
+ with ESMTPS id hAzv-0XKnrtT for <moviemento@listi.jpberlin.de>;
+ Thu, 23 Oct 2014 01:03:12 +0200 (CEST)
+Received: from [192.168.44.14] (p5DDC454A.dip0.t-ipconnect.de [93.220.69.74])
+ (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+ (Client did not present a certificate)
+ (Authenticated sender: post@moviemento.de)
+ by plasma.jpberlin.de (Postfix) with ESMTPSA id E57CCA6AEB
+ for <moviemento@listi.jpberlin.de>; Thu, 23 Oct 2014 01:03:09 +0200 (CEST)
+Message-ID: <544837AA.4020904@moviemento.de>
+Date: Thu, 23 Oct 2014 01:03:06 +0200
+From: Moviemento <post@moviemento.de>
+User-Agent: Mozilla/5.0 (Windows NT 6.1;
+ rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: moviemento@listi.jpberlin.de
+Subject: Moviemento Kinoprogramm 23.10.-05.11.2014
+Content-Type: multipart/mixed; boundary="------------000405090609030201040008"
+X-Mailman-Approved-At: Thu, 23 Oct 2014 01:04:12 +0200
+X-BeenThere: moviemento@listi.jpberlin.de
+X-Mailman-Version: 2.1.15
+Precedence: list
+Reply-To: post@moviemento.de
+List-Id: Kinoprogramm des Moviemento <moviemento.listi.jpberlin.de>
+List-Unsubscribe: <https://listi.jpberlin.de/mailman/options/moviemento>,
+ <mailto:moviemento-request@listi.jpberlin.de?subject=unsubscribe>
+List-Post: <mailto:moviemento@listi.jpberlin.de>
+List-Help: <mailto:moviemento-request@listi.jpberlin.de?subject=help>
+List-Subscribe: <https://listi.jpberlin.de/mailman/listinfo/moviemento>,
+ <mailto:moviemento-request@listi.jpberlin.de?subject=subscribe>
+Errors-To: moviemento-bounces@listi.jpberlin.de
+Sender: "Moviemento" <moviemento-bounces@listi.jpberlin.de>
+
+This is a multi-part message in MIME format.
+--------------000405090609030201040008
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Liebe Kinofreunde,
+
+Anbei wie immer ausführlich als PDF und unten in der Mail noch einmal
+mit den reinen Listings unser Kinoprogramm für den Zeitraum
+23.10.-05.11.2014.
+
+--
+Wer aus der mailingliste gelöscht werden möchte, kann sich auf unserer
+Internetseite www.moviemento.de selber austragen oder
+gerne kurz diese Bitte an post@moviemento.de mit dem betreff 'bitte aus
+der mailingliste löschen' senden.
+Moviemento
+Kottbusser Damm 22
+10967 Berlin
+fon 030 / 692 47 85
+Moviemento Kino Betriebs GmbH
+www.moviemento.de
+Im Handelsregister eingetragen: HRB 106376 B, Geschäftsführer Iris
+Praefke, Wulf Sörgel, Sitz Berlin
+
+--------------000405090609030201040008
+Content-Type: application/pdf;
+ name="kinoprogramm_43---14.pdf"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename="kinoprogramm_43---14.pdf"
+
+JVBERi0xLjUNJeLjz9MNCjEyIDAgb2JqDTw8L0xpbmVhcml6ZWQgMS9MIDEyMTcxMDcvTyAx
+NC9FIDc1NDc2OS9OIDIvVCAxMjE2NzUyL0ggWyAzMjk2IDQ3Ml0+Pg1lbmRvYmoNICAgICAg
+ICAgICAgIA14cmVmDTEyIDE1MA0wMDAwMDAwMDE2IDAwMDAwIG4NCjAwMDAwMDM3NjggMDAw
+MDAgbg0KMDAwMDAwMzg2NiAwMDAwMCBuDQowMDAwMDA0ODA4IDAwMDAwIG4NCjAwMDAwMDUz
+MjkgMDAwMDAgbg0KMDAwMDAwNTU5OSAwMDAwMCBuDQowMDAwMDA2MjIzIDAwMDAwIG4NCjAw
+MDAwMDY3MjYgMDAwMDAgbg0KMDAwMDAwNzQxMCAwMDAwMCBuDQowMDAwMDA4MDQwIDAwMDAw
+IG4NCjAwMDAwMDgxMjYgMDAwMDAgbg0KMDAwMDAwODIzNyAwMDAwMCBuDQowMDAwMDA4MzUw
+IDAwMDAwIG4NCjAwMDAwMDgzOTUgMDAwMDAgbg0KMDAwMDAwODQ0MCAwMDAwMCBuDQowMDAw
+MDA4NDg1IDAwMDAwIG4NCjAwMDAwMDkxOTAgMDAwMDAgbg0KMDAwMDAwOTc0NSAwMDAwMCBu
+DQowMDAwMDEwNDk5IDAwMDAwIG4NCjAwMDAwMTEyODMgMDAwMDAgbg0KMDAwMDAxMTk0NSAw
+MDAwMCBuDQowMDAwMDExOTgwIDAwMDAwIG4NCjAwMDAwMTIwMjUgMDAwMDAgbg0KMDAwMDAx
+MjA3MCAwMDAwMCBuDQowMDAwMDE0OTMyIDAwMDAwIG4NCjAwMDAwMTgwMTIgMDAwMDAgbg0K
+MDAwMDAyMTE2MCAwMDAwMCBuDQowMDAwMDIxMzI2IDAwMDAwIG4NCjAwMDAwMjE5ODIgMDAw
+Y2UiPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6YWN0aW9uPnNhdmVkPC9zdEV2dDphY3Rp
+b24+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDppbnN0YW5jZUlEPnhtcC5paWQ6Q0NBQTI1
+NTMyQzIwNjgxMTg4QzZBQUJBQ0UzOEY0RjE8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAg
+MDc2NTY4OCAwMDAwMCBuDQowMDAwNzcwMzU3IDAwMDAwIG4NCjAwMDA3NzE5MDcgMDAwMDAg
+bg0KMDAwMDc3NTI1NyAwMDAwMCBuDQowMDAwNzc2ODA3IDAwMDAwIG4NCjAwMDA3ODE5NjIg
+MDAwMDAgbg0KMDAwMDc4MjAyMCAwMDAwMCBuDQowMDAxMjE2NTY5IDAwMDAwIG4NCnRyYWls
+ZXINPDwvU2l6ZSAxMi9JRFs8NDc3MjYxMjM4RDNFNDlENzlDN0IwMThGMzFCRDlGNDU+PEFF
+NjM3NEEwNkUwNTQzNjhCNEE4Mzc1QjFGRjNCRDUyPl0+Pg1zdGFydHhyZWYNMTE2DSUlRU9G
+DQ==
+--------------000405090609030201040008
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+_______________________________________________
+Moviemento Mailingliste
+JPBerlin - Politischer Provider
+Moviemento@listi.jpberlin.de
+https://listi.jpberlin.de/mailman/listinfo/moviemento
+
+--------------000405090609030201040008--

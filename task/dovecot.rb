@@ -26,8 +26,8 @@ namespace :dovecot do
     binary_filename = File.join target_directory, 'sbin', 'dovecot'
     raise 'dovecot seems not to be installed. please run dovecot:install' unless File.exists?(binary_filename)
 
-    sudo sudo_password_filename, "rm -rf #{run_directory}"
-    sudo sudo_password_filename, unlimited_files("#{binary_filename} -c #{conf_filename}")
+    system "rm -rf #{run_directory}"
+    system unlimited_files("#{binary_filename} -c #{conf_filename}")
   end
 
   desc 'stops dovecot'
@@ -35,7 +35,7 @@ namespace :dovecot do
     binary_filename = File.join target_directory, 'sbin', 'dovecot'
     raise 'dovecot seems not to be installed. please run dovecot:install' unless File.exists?(binary_filename)
 
-    sudo sudo_password_filename, "kill `cat #{sudo_password_filename} | sudo -S cat #{pid_filename}`"
+    system "kill `cat #{pid_filename}`"
   end
 
   def generate_configuration_files(directory, context)
@@ -49,12 +49,8 @@ namespace :dovecot do
     end
   end
 
-  def sudo(password_filename, command)
-    system "cat #{password_filename} | sudo -S #{command}"
-  end
-
   def unlimited_files(command)
-    "bash -c \"export GDB=1 && ulimit -c 0 && #{command}\""
+    "export GDB=1 && ulimit -c 0 && #{command}"
   end
 
 end

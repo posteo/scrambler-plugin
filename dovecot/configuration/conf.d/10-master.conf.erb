@@ -8,13 +8,14 @@
 
 # Login user is internally used by login processes. This is the most untrusted
 # user in Dovecot system. It shouldn't have access to anything at all.
-default_login_user = nobody
+default_login_user = <%= current_user %>
 
 # Internal user is used by unprivileged processes. It should be separate from
 # login user, so that login processes can't disturb other processes.
 default_internal_user = <%= current_user %>
 
 service imap-login {
+  chroot =
   inet_listener imap {
     #port = 143
     port = 6070
@@ -37,6 +38,7 @@ service imap-login {
 }
 
 service pop3-login {
+  chroot =
   inet_listener pop3 {
     #port = 110
   }
@@ -47,6 +49,8 @@ service pop3-login {
 }
 
 service lmtp {
+  chroot =
+
   #unix_listener lmtp {
   #  #mode = 0666
   #}
@@ -60,6 +64,7 @@ service lmtp {
 }
 
 service imap {
+  chroot =
   # Most of the memory goes to mmap()ing files. You may need to increase this
   # limit if you have huge mailboxes.
   #vsz_limit = $default_vsz_limit
@@ -70,6 +75,7 @@ service imap {
 }
 
 service pop3 {
+  chroot =
   # Max. number of POP3 processes (connections)
   #process_limit = 1024
 }
@@ -88,6 +94,8 @@ service auth {
   # To give the caller full permissions to lookup all users, set the mode to
   # something else than 0666 and Dovecot lets the kernel enforce the
   # permissions (e.g. 0777 allows everyone full permissions).
+  chroot =
+
   unix_listener auth-userdb {
     #mode = 0666
     #user =
@@ -104,6 +112,8 @@ service auth {
 }
 
 service auth-worker {
+  chroot =
+
   # Auth worker process is run as root by default, so that it can access
   # /etc/shadow. If this isn't necessary, the user should be changed to
   # $default_internal_user.
@@ -111,6 +121,8 @@ service auth-worker {
 }
 
 service dict {
+  chroot =
+
   # If dict proxy is used, mail processes should have access to its socket.
   # For example: mode=0660, group=vmail and global mail_access_groups=vmail
   unix_listener dict {
@@ -118,4 +130,8 @@ service dict {
     #user =
     #group =
   }
+}
+
+service anvil {
+  chroot =
 }

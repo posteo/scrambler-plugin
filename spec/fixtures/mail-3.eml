@@ -1,0 +1,133 @@
+Return-Path: <test+caf_=test=posteo.de@gmail.com>
+Delivered-To: test@posteo.de
+Received: from proxy01.posteo.de ([127.0.0.1])
+	by dovecot04.posteo.de (Dovecot) with LMTP id KtNCG7EDdVSBUwAAvlP5og
+	for <test@posteo.de>; Wed, 26 Nov 2014 00:21:16 +0100
+Received: from proxy01.posteo.de ([127.0.0.1])
+	by proxy01.posteo.de (Dovecot) with LMTP id XVleEw0OdVSNkgMAKZGY6Q
+	; Wed, 26 Nov 2014 00:21:16 +0100
+Received: from mx02.posteo.de (unknown [10.125.125.165])
+	by proxy01.posteo.de (Postfix) with ESMTPS id 3jnLp41wR0z2x9b
+	for <test@posteo.de>; Wed, 26 Nov 2014 00:21:16 +0100 (CET)
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by mx02.posteo.de (Postfix) with ESMTP id 3D79A25ACC40
+	for <test@posteo.de>; Wed, 26 Nov 2014 00:21:16 +0100 (CET)
+X-Virus-Scanned: amavisd-new at posteo.de
+X-Spam-Flag: NO
+X-Spam-Score: -1.898
+X-Spam-Level:
+X-Spam-Status: No, score=-1.898 required=6.01 tests=[BAYES_00=-1.9,
+	FREEMAIL_FROM=0.001, URIBL_BLOCKED=0.001] autolearn=ham
+Received: from mx02.posteo.de ([127.0.0.1])
+	by localhost (amavis1.posteo.de [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id mT6J25RvstMg for <test@posteo.de>;
+	Wed, 26 Nov 2014 00:21:14 +0100 (CET)
+Received: from mail-vc0-f169.google.com (mail-vc0-f169.google.com [209.85.220.169])
+	by mx02.posteo.de (Postfix) with ESMTPS
+	for <test@posteo.de>; Wed, 26 Nov 2014 00:21:14 +0100 (CET)
+Received: by mail-vc0-f169.google.com with SMTP id hy10so778684vcb.28
+        for <test@posteo.de>; Tue, 25 Nov 2014 15:21:13 -0800 (PST)
+X-Received: by 10.220.103.74 with SMTP id j10mr7669847vco.58.1416957673087;
+        Tue, 25 Nov 2014 15:21:13 -0800 (PST)
+X-Forwarded-To: test@posteo.de
+X-Forwarded-For: test@gmail.com test@posteo.de
+Delivered-To: test@gmail.com
+Received: by 10.31.0.212 with SMTP id 203csp501225vka;
+        Tue, 25 Nov 2014 15:21:12 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-original-authentication-results:delivered-to:delivered-to:date
+         :from:to:subject:message-id:mail-followup-to:references:mime-version
+         :content-type:content-disposition:in-reply-to:user-agent:precedence
+         :list-id:list-unsubscribe:list-archive:list-post:list-help
+         :list-subscribe:errors-to:sender;
+        bh=qF1/A7Hgr5kDqc5ZbERvfNOHXRi/ZBkDNbjT4pg/NeQ=;
+        b=PEyU4S33uV3W5M/PYh/fmZ+uiUGZiwm73q80EMyM3LK4j3W9/1fiqGpR83Cb+qJsp1
+         jchmDmskWJYltyuFXujHa/YiRLDpdDXuUea54YgZFfprXOoyEkOjOGNtIarMP7ZxiBRr
+         OVKcgrjLTeTCWbalb7i/AfFElwVP4t/50kMAedIBlBa9V08s2vhtj1NwWOROvnI8EYj5
+         soqO9uuIOpcO+5QY/n/JBwfRL868IdvrAos2fSEXw/DJD3Hq9VRnbYFztCTJYLJJ3qaz
+         wUtMer42fO2eKEtVUjR/vnu7mg6J05C7RdH9ZlXe+A9TJpC41dUFv/Y+SrjEQljZRZkg
+         rtCw==
+X-Original-Authentication-Results: mx.google.com;       spf=none (google.com: dovecot-bounces@dovecot.org does not designate permitted sender hosts) smtp.mail=dovecot-bounces@dovecot.org
+X-Received: from mr.google.com ([10.60.177.41])
+        by 10.60.177.41 with SMTP id cn9mr11287431oec.63.1416957672057 (num_hops = 1);
+        Tue, 25 Nov 2014 15:21:12 -0800 (PST)
+X-Received: by 10.60.177.41 with SMTP id cn9mr17024460oec.63.1416957671556;
+        Tue, 25 Nov 2014 15:21:11 -0800 (PST)
+X-Forwarded-To: test@gmail.com
+X-X-Forwarded-For: b.test@googlemail.com test@gmail.com
+Delivered-To: b.test@gmail.com
+Received: by 10.76.55.83 with SMTP id q19csp586073oap;
+        Tue, 25 Nov 2014 15:21:10 -0800 (PST)
+X-Received: by 10.180.93.195 with SMTP id cw3mr35973060wib.68.1416957670219;
+        Tue, 25 Nov 2014 15:21:10 -0800 (PST)
+Received: from wursti.dovecot.fi (wursti.dovecot.fi. [87.106.245.223])
+        by mx.google.com with ESMTP id z2si5205692wib.91.2014.11.25.15.21.08
+        for <multiple recipients>;
+        Tue, 25 Nov 2014 15:21:10 -0800 (PST)
+Received-SPF: none (google.com: dovecot-bounces@dovecot.org does not designate permitted sender hosts) client-ip=87.106.245.223;
+Authentication-Results: mx.google.com;
+       spf=none (google.com: dovecot-bounces@dovecot.org does not designate permitted sender hosts) smtp.mail=dovecot-bounces@dovecot.org
+Received: from wursti.dovecot.fi (localhost.localdomain [127.0.0.1])
+	by wursti.dovecot.fi (Postfix) with ESMTP id 752F4225A1;
+	Wed, 26 Nov 2014 00:21:04 +0100 (CET)
+Received: from talvi.dovecot.org (unknown [137.117.229.219])
+	by wursti.dovecot.fi (Postfix) with ESMTP;
+	Wed, 26 Nov 2014 00:21:03 +0100 (CET)
+Received: from [137.117.229.219] (localhost [127.0.0.1])
+	by talvi.dovecot.org (Postfix) with ESMTP id 0062B23602;
+	Tue, 25 Nov 2014 23:21:05 +0000 (UTC)
+X-Original-To: dovecot@dovecot.org
+Delivered-To: dovecot@dovecot.org
+Received: by talvi.dovecot.org (Postfix, from userid 506)
+	id 7C2D9235DB; Tue, 25 Nov 2014 23:20:47 +0000 (UTC)
+Received: from santino.mail.tiscali.it (unknown [213.205.33.245])
+	by talvi.dovecot.org (Postfix) with ESMTP id 135E2235DB
+	for <dovecot@dovecot.org>; Tue, 25 Nov 2014 23:20:47 +0000 (UTC)
+Received: from localhost ([213.205.49.209]) by santino.mail.tiscali.it with 
+	id KzLf1p0054WodF101zLf4x; Wed, 26 Nov 2014 00:20:39 +0100
+x-auth-user: barraudu@tiscali.it
+Date: Wed, 26 Nov 2014 00:20:39 +0100
+From: brd <barraudu@tiscali.it>
+To: dovecot@dovecot.org
+Subject: Re: LastLogin
+Message-ID: <20141125232039.GA24873@tiscali.com>
+Mail-Followup-To: dovecot@dovecot.org
+References: <B1D6D797-69A9-4BFC-8A2C-D87A4D2010B0@iki.fi>
+	<543F6F3E.30709@luigirosa.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <543F6F3E.30709@luigirosa.com>
+User-Agent: Mutt/1.5.23 (2014-03-12)
+X-BeenThere: dovecot@dovecot.org
+X-Mailman-Version: 2.1.17
+Precedence: list
+List-Id: Dovecot Mailing List <dovecot.dovecot.org>
+List-Unsubscribe: <http://dovecot.org/cgi-bin/mailman/options/dovecot>,
+	<mailto:dovecot-request@dovecot.org?subject=unsubscribe>
+List-Archive: <http://dovecot.org/pipermail/dovecot/>
+List-Post: <mailto:dovecot@dovecot.org>
+List-Help: <mailto:dovecot-request@dovecot.org?subject=help>
+List-Subscribe: <http://dovecot.org/cgi-bin/mailman/listinfo/dovecot>,
+	<mailto:dovecot-request@dovecot.org?subject=subscribe>
+Errors-To: dovecot-bounces@dovecot.org
+Sender: "dovecot" <dovecot-bounces@dovecot.org>
+
+> -----BEGIN PGP SIGNATURE-----
+> Version: GnuPG v1
+> 
+> iQIcBAEBAgAGBQJUP285AAoJEO5WT/qgw4yKPngQAKYkmLQuVf3/ViWfWOkwah52
+> vYv6uXYcWWRa76NNIVGLw4I9LMWv1Nw0DWNAJotPkHBggbBzkc396Etb+6qrj0uT
+> zNz/uHfsv4CJquxRFyGtGal+j9ZeG2T60PtZXkh+sHAnShSmbvsr+RzLgJOzfYVh
+> o5RAW//bLiRdyVun32ZRwHLwueI14ppQxnAQOMuvTZNUxYg3nxUnkOObx2/5pGmq
+> bv61gg+AFK74/QoMZrK9UdS3Pg7gQU8PXd2j4tv08iuJ4MjBlHx14aye0hdc1T6p
+> 1VlM8kd/nh62B7hQEBPxRB0G2jVA/LM58ENO7MmbsX3E5+p1hgg++aw7prmsZvw8
+> mpM5MazHzj78jdclNVa94TqOnXOJ/3D5+0bEAILu20QchjP4aFcmAHf3xZW6lA1t
+> ZcCYb2n/UOEL2+9vaR8ngAqpi/14mmgQQL1r9rqNDqx8uZGzfRq1LKD2RyQ+Vt0e
+> ui7eMnL4dNMhpW+IU3eGH8+/V7gf2Aj5MRFDZ8r+nzi6PdjSRBwRz5/arrc87r2P
+> XmYebH6bRYMpVYHoWk76HrOkOSrYmYYRYijqfMivLoF1Fa25XDu4wqN55D+VZgEa
+> 5Ad8/BSvhV0Yhg9yVoqXGREbxPLlQAQ8RA2fMhm5I1pqr3YYxoh5ayFiAGPBhnD1
+> aBFenPPnc6DnN+luxFWj
+> =5H+W
+> -----END PGP SIGNATURE-----

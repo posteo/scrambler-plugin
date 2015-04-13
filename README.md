@@ -29,9 +29,6 @@ Tests
 
 All tests are written with RSpec and can be run with `make spec-all` or `bundle exec rake spec:integration`
 
-Since dovecot needs root privileges to run, you need create the file `sudo.password` with contains the
-password that is needed for running dovecot with sudo.
-
 Project
 -------
 
