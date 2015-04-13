@@ -1,6 +1,7 @@
 .idea
 *.log
 *.o
+Makefile.deploy
 sudo.password
 attachment.*
 dovecot/source

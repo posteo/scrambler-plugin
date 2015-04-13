@@ -33,15 +33,6 @@ $(TARGET_LIB_SO): $(O_FILES)
 clean:
 	rm -f $(O_FILES) $(TARGET_LIB_SO)
 
-deploy-staging: $(TARGET_LIB_SO)
-	scp $< staging:/usr/lib/dovecot/modules
-
-deploy-dovecot01: $(TARGET_LIB_SO)
-	scp $< dovecot01:/usr/lib64/dovecot
-
-deploy-dovecot02: $(TARGET_LIB_SO)
-	scp $< dovecot02:/usr/lib64/dovecot
-
 spec-all: $(TARGET_LIB_SO)
 	bash --login -c 'rake spec:integration'
 
@@ -50,3 +41,5 @@ spec-focus: $(TARGET_LIB_SO)
 
 log:
 	tail -f dovecot/log/dovecot.log
+
+-include Makefile.deploy
