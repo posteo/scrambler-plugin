@@ -48,7 +48,7 @@ describe 'Mail encryption enabled' do
       end.should raise_error('invalid password')
     end
 
-    it 'should decrypt the meta-data and mail during reception' do
+    it 'should decrypt the meta-data and mail during reception', focus: true do
       mails = @mailer.receive
       mails.length.should == 1
       mails[0].should =~ /test message one/

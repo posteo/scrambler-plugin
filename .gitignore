@@ -4,6 +4,8 @@
 Makefile.deploy
 sudo.password
 attachment.*
+dovecot/*.tar.gz
+dovecot/*.tar.gz.sig
 dovecot/source
 dovecot/target
 dovecot/run
@@ -11,7 +13,6 @@ dovecot/home/test/mail
 dovecot/staging
 dovecot/configuration/dovecot.conf
 dovecot/configuration/dovecot-sql.conf.ext
-dovecot/configuration/mailservice.sqlite
 dovecot/configuration/conf.d/10-master.conf
 dovecot/configuration/conf.d/10-logging.conf
 dovecot/configuration/conf.d/80-mailfilter.conf

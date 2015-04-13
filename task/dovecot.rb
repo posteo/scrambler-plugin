@@ -16,26 +16,6 @@ namespace :dovecot do
   conf_filename = File.join configuration_directory, 'dovecot.conf'
   pid_filename = File.join run_directory, 'master.pid'
 
-  namespace :source do
-
-    desc 'configures the dovecot sources'
-    task :configure do
-      #system "cd #{source_directory} && ./configure --build=i386-linux-gnu --prefix #{target_directory} --with-sqlite --enable-devel-checks \"CFLAGS=-m32\" \"CXXFLAGS=-m32\" \"LDFLAGS=-m32\""
-      system "cd #{source_directory} && ./configure --prefix #{target_directory} --with-sqlite"
-    end
-
-    desc 'compile the dovecot sources'
-    task :compile do
-      system "cd #{source_directory} && make -j #{Facter.processorcount}"
-    end
-
-  end
-
-  desc 'install the compiled dovecot binaries'
-  task :install => %w{dovecot:source:compile} do
-    system "cd #{source_directory} && make install"
-  end
-
   desc 'configures the dovecot sources'
   task :configure do
     generate_configuration_files configuration_directory, Context.new(dovecot_directory)
