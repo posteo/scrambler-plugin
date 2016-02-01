@@ -1,5 +1,5 @@
 
-DOVECOT_VERSION=2.2.15
+DOVECOT_VERSION=2.2.21
 DOVECOT_DIR=$(abspath dovecot)
 DOVECOT_KEYRING_FILE=$(DOVECOT_DIR)/dovecot.gpg
 DOVECOT_SOURCE_URL=http://dovecot.org/releases/2.2/dovecot-$(DOVECOT_VERSION).tar.gz

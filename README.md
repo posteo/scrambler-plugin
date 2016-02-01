@@ -29,6 +29,32 @@ Tests
 
 All tests are written with RSpec and can be run with `make spec-all` or `bundle exec rake spec:integration`
 
+Configuration
+-------------
+
+In order to run, the plugin needs the following configuration values (via the dovecot environment).
+
+* `scrambler_plain_password` The plain user password. It's used to derive the hashed password to decrypt the
+  private key.
+
+* `scrambler_enabled` Can be `1` or `0`.
+
+* `scrambler_public_key` The public key of the user. Formatted as _pem_.
+
+* `scrambler_private_key` The encrypted private key of the user. Formatted as _pem_.
+
+* `scrambler_private_key_salt` The salt of the hashed password that has been used to encrypt the private key.
+
+* `scrambler_private_key_iterations` The number of iterations of the hashed password that has been used to
+  encrypt the private key.
+
+A configuration example can be found at `dovecot/configuration/dovecot-sql.conf.ext.erb`.
+
+Migration
+---------
+
+The migration of unencrypted mailboxes has to be done by a separate tool and is _not_ part of this project.
+
 Project
 -------
 
